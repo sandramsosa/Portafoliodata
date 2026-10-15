@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Sandra Mabel Sosa | Portafolio Inmersivo de Datos & Business Intelligence</title>
+  <meta name="description"
+    content="Portafolio inmersivo 3D de Sandra Mabel Sosa: Data Analytics, Business Intelligence, Python, SQL y Machine Learning.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div id="top"></div>
+  <div id="world"></div>
+
+  <!-- Scroll Engine -->
+  <script src="js/scrub-engine.js"></script>
+
+  <!-- Initialization & Content Configuration -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      mountScrollWorld(document.getElementById('world'), {
+        brand: {
+          name: 'Sandra Mabel Sosa',
+          href: '#top'
+        },
+        cta: {
+          label: 'Contactar',
+          href: 'javascript:window.jumpToContact()'
+        },
+        hint: 'Desplaza hacia abajo para navegar',
+        diveScroll: 1.8,
+        connScroll: 0.9,
+        atmosphere: true,
+        nav: true,
+        sections: [
+          // --------------------------------------------------------------------
+          // ESCENA 1: INICIO Y SOBRE MÍ (El Cerebro Analítico)
+          // --------------------------------------------------------------------
+          {
+            id: 'intro',
+            label: '01 · Inicio',
+            still: 'assets/images/image_1.jpg',
+            clip: 'assets/videos/escena_1.mp4',
+            accent: '#00f0ff',
+            scroll: 2.0,
+            eyebrow: 'Data Analytics & Business Intelligence',
+            title: 'Transformando datos en decisiones.',
+            body: '¡Hola! Soy Sandra, especialista en transformar datos crudos en información estratégica y accionable. Combino curiosidad analítica, constancia y visión de negocio para resolver problemas complejos.',
+            tags: ['Python & Pandas', 'SQL Relacional', 'Business Intelligence', 'Machine Learning'],
+            customHtml: `
+              <div class="hero-stats-grid">
+                <div class="hero-stat-card">
+                  <div class="hero-stat-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                  <div class="hero-stat-info">
+                    <h4>Business Intelligence</h4>
+                    <p>KPIs & Dashboards visuales</p>
+                  </div>
+                </div>
+                <div class="hero-stat-card">
+                  <div class="hero-stat-icon"><i class="fa-solid fa-code"></i></div>
+                  <div class="hero-stat-info">
+                    <h4>Python & Automatización</h4>
+                    <p>Pipelines ETL y limpieza</p>
+                  </div>
+                </div>
+                <div class="hero-stat-card">
+                  <div class="hero-stat-icon"><i class="fa-solid fa-database"></i></div>
+                  <div class="hero-stat-info">
+                    <h4>Bases de Datos</h4>
+                    <p>Consultas y modelado SQL</p>
+                  </div>
+                </div>
+                <div class="hero-stat-card">
+                  <div class="hero-stat-icon"><i class="fa-solid fa-brain"></i></div>
+                  <div class="hero-stat-info">
+                    <h4>Machine Learning</h4>
+                    <p>Modelos predictivos de valor</p>
+                  </div>
+                </div>
+              </div>
+            `
+          },
+
+          // --------------------------------------------------------------------
+          // ESCENA 2: HABILIDADES Y PROYECTOS (La Sala de Servidores)
+          // --------------------------------------------------------------------
+          {
+            id: 'habilidades-proyectos',
+            label: '02 · Habilidades y Proyectos',
+            still: 'assets/images/image_3.jpg',
+            clip: 'assets/videos/escena_2.mp4',
+            accent: '#38bdf8',
+            scroll: 2.4,
+            eyebrow: 'Toolbox Digital & Soluciones',
+            title: 'Habilidades & Proyectos',
+            body: 'Un recorrido por mis herramientas de ingeniería y análisis de datos, junto con casos de estudio aplicados a problemas de negocio.',
+            tags: ['PostgreSQL', 'Looker Studio', 'Excel Avanzado', 'Google Colab'],
+            customHtml: `
+              <div class="eco-tabs-container">
+                <div class="eco-tab-buttons">
+                  <button type="button" class="eco-tab-btn is-active" onclick="switchEcoTab('skills')">
+                    <i class="fa-solid fa-layer-group"></i> Habilidades
+                  </button>
+                  <button type="button" class="eco-tab-btn" onclick="switchEcoTab('projects')">
+                    <i class="fa-solid fa-folder-open"></i> Proyectos
+                  </button>
+                </div>
+
+                <!-- Panel 1: Habilidades -->
+                <div id="tab-skills-panel" class="skills-grid">
+                  <div class="skill-chip">
+                    <img src="assets/images/sql.png" alt="SQL" loading="lazy">
+                    <div class="skill-chip-text">
+                      <span class="skill-chip-name">SQL</span>
+                      <span class="skill-chip-level">Intermedio</span>
+                    </div>
+                  </div>
+                  <div class="skill-chip">
+                    <img src="assets/images/postgretsql.png" alt="PostgreSQL" loading="lazy">
+                    <div class="skill-chip-text">
+                      <span class="skill-chip-name">PostgreSQL</span>
+                      <span class="skill-chip-level">Intermedio</span>
+                    </div>
+                  </div>
+                  <div class="skill-chip">
+                    <img src="assets/images/python.png" alt="Python" loading="lazy">
+                    <div class="skill-chip-text">
+                      <span class="skill-chip-name">Python</span>
+                      <span class="skill-chip-level">Intermedio</span>
+                    </div>
+                  </div>
+                  <div class="skill-chip">
+                    <img src="assets/images/excel.png" alt="Excel" loading="lazy">
+                    <div class="skill-chip-text">
+                      <span class="skill-chip-name">Excel</span>
+                      <span class="skill-chip-level">Avanzado</span>
+                    </div>
+                  </div>
+                  <div class="skill-chip">
+                    <img src="assets/images/looker-studio-logo.png" alt="Looker Studio" loading="lazy">
+                    <div class="skill-chip-text">
+                      <span class="skill-chip-name">Looker Studio</span>
+                      <span class="skill-chip-level">Intermedio</span>
+                    </div>
+                  </div>
+                  <div class="skill-chip">
+                    <img src="assets/images/colab.png" alt="Google Colab" loading="lazy">
+                    <div class="skill-chip-text">
+                      <span class="skill-chip-name">Colab</span>
+                      <span class="skill-chip-level">Intermedio</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Panel 2: Proyectos -->
+                <div id="tab-projects-panel" class="projects-mini-grid" style="display: none;">
+                  <div class="project-mini-card">
+                    <div class="project-mini-header">
+                      <img src="assets/images/inventario_py.png" alt="Inventario Python">
+                      <h5 class="project-mini-title">Inventario Python</h5>
+                    </div>
+                    <p class="project-mini-desc">Sistema interactivo por consola con menú CRUD para gestión ágil de productos.</p>
+                    <div class="project-mini-actions">
+                      <a href="https://drive.google.com/file/d/1rGHJUYOoLs_NlAIe6crKV23UpW5TkgZB/view?usp=sharing" target="_blank" rel="noopener" class="project-btn project-btn--demo">
+                        <i class="fa-solid fa-play"></i> Demo
+                      </a>
+                      <a href="https://github.com/sandramsosa/Inventario_Python" target="_blank" rel="noopener" class="project-btn project-btn--code">
+                        <i class="fa-brands fa-github"></i> Código
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="project-mini-card">
+                    <div class="project-mini-header">
+                      <img src="assets/images/images.jpg" alt="Business Intelligence">
+                      <h5 class="project-mini-title">Business Intelligence</h5>
+                    </div>
+                    <p class="project-mini-desc">Procesamiento y visualización estratégica para transformar datos en conocimientos accionables.</p>
+                    <div class="project-mini-actions">
+                      <a href="https://drive.google.com/drive/folders/1U9Jl1fr-H3tO6JFwgkxCxQQbnhYe94ZX?usp=sharing" target="_blank" rel="noopener" class="project-btn project-btn--demo">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo Drive
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="project-mini-card">
+                    <div class="project-mini-header">
+                      <img src="assets/images/images (1).jpg" alt="Data Analytics Python">
+                      <h5 class="project-mini-title">Analytics con Python</h5>
+                    </div>
+                    <p class="project-mini-desc">ETL automatizado con Pandas, NumPy y Matplotlib para carga en bases de datos relacionales.</p>
+                    <div class="project-mini-actions">
+                      <a href="https://drive.google.com/drive/folders/1GS3dH2A2UeqgZ4V2NIO3G6_ZIYLx098v?usp=sharing" target="_blank" rel="noopener" class="project-btn project-btn--demo">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo Drive
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="project-mini-card">
+                    <div class="project-mini-header">
+                      <img src="assets/images/images (2).jpg" alt="Machine Learning">
+                      <h5 class="project-mini-title">Machine Learning</h5>
+                    </div>
+                    <p class="project-mini-desc">Modelos predictivos desde preprocesamiento y selección de variables hasta evaluación.</p>
+                    <div class="project-mini-actions">
+                      <a href="https://drive.google.com/drive/folders/1olv3Oecy2gE7qf2ocnCcsP-72GtuVQG-?usp=sharing" target="_blank" rel="noopener" class="project-btn project-btn--demo">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo Drive
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            `
+          },
+
+          // --------------------------------------------------------------------
+          // ESCENA 3: CONTACTO (El Portal de Neón con Foto de Sandra)
+          // --------------------------------------------------------------------
+          {
+            id: 'contacto',
+            label: '03 · Contacto',
+            still: 'assets/images/image_4.jpg',
+            clip: 'assets/videos/escena_3.mp4',
+            accent: '#00f0ff',
+            scroll: 2.2,
+            eyebrow: 'El Portal de Conexión',
+            title: '¿Hablamos de tu proyecto?',
+            body: 'Llegamos al final del viaje. Si estás buscando a alguien con determinación, capacidad analítica y pasión por generar valor a través de los datos, estoy lista para el desafío.',
+            tags: ['Disponible para nuevos retos', 'Remoto / Híbrido', 'Data Analyst'],
+            customHtml: `
+              <div class="profile-contact-card">
+                <div class="profile-top-row">
+                  <div class="profile-avatar-frame">
+                    <img src="assets/images/foto.jpeg" alt="Sandra Mabel Sosa" class="profile-avatar-img">
+                    <span class="profile-status-dot" title="Disponible para colaborar"></span>
+                  </div>
+                  <div class="profile-details">
+                    <h3>Sandra Mabel Sosa</h3>
+                    <p class="profile-role">Data Analyst & Business Intelligence Specialist</p>
+                    <p class="profile-location"><i class="fa-solid fa-location-dot"></i> Argentina · Modalidad Remota / Híbrida</p>
+                    <span class="profile-badge"><i class="fa-solid fa-circle-check"></i> Disponible para nuevos proyectos</span>
+                  </div>
+                </div>
+
+                <div class="contact-actions-grid">
+                  <a href="assets/cv/Sandra Sosa_cv.pdf" target="_blank" class="contact-action-btn contact-action-btn--primary">
+                    <i class="fa-solid fa-file-arrow-down fa-lg"></i> Descargar CV
+                  </a>
+                  <a href="https://wa.me/54961914936" target="_blank" rel="noopener" class="contact-action-btn contact-action-btn--whatsapp">
+                    <i class="fa-brands fa-whatsapp fa-xl"></i> WhatsApp
+                  </a>
+                  <a href="mailto:sandramabelsosa@gmail.com" class="contact-action-btn contact-action-btn--email">
+                    <i class="fa-solid fa-envelope fa-lg"></i> Enviar Correo
+                  </a>
+                  <a href="https://github.com/sandramsosa" target="_blank" rel="noopener" class="contact-action-btn contact-action-btn--github">
+                    <i class="fa-brands fa-github fa-lg"></i> Mi GitHub
+                  </a>
+                </div>
+              </div>
+            `
+          }
+        ]
+      });
+
+      // Interactive Tab Switcher Helper
+      window.switchEcoTab = function (tabName) {
+        const skillsPanel = document.getElementById('tab-skills-panel');
+        const projectsPanel = document.getElementById('tab-projects-panel');
+        const buttons = document.querySelectorAll('.eco-tab-btn');
+
+        if (!skillsPanel || !projectsPanel) return;
+
+        if (tabName === 'skills') {
+          skillsPanel.style.display = 'grid';
+          projectsPanel.style.display = 'none';
+          buttons[0]?.classList.add('is-active');
+          buttons[1]?.classList.remove('is-active');
+        } else {
+          skillsPanel.style.display = 'none';
+          projectsPanel.style.display = 'grid';
+          buttons[0]?.classList.remove('is-active');
+          buttons[1]?.classList.add('is-active');
+        }
+      };
+
+      // Jump to contact section
+      window.jumpToContact = function () {
+        const track = document.querySelector('.sw-track');
+        if (track) {
+          window.scrollTo({
+            top: track.scrollHeight,
+            behavior: 'smooth'
+          });
+        }
+      };
+    });
+  </script>
+</body>
+
+</html>
