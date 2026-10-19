@@ -25,7 +25,19 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=2">
+
+  <!-- Mobile Fix: Hide scroll indicator on phones, tablets and small viewports -->
+  <style>
+    @media (max-width: 860px), (max-height: 760px), (hover: none) and (pointer: coarse) {
+      .sw-hint {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -33,7 +45,7 @@
   <div id="world"></div>
 
   <!-- Scroll Engine -->
-  <script src="js/scrub-engine.js"></script>
+  <script src="js/scrub-engine.js?v=2"></script>
 
   <!-- Initialization & Content Configuration -->
   <script>

@@ -621,6 +621,11 @@ body {
    ============================================================================ */
 
 @media (max-width: 860px) {
+  /* Ocultar el mensaje e icono de 'Desplaza hacia abajo' en pantallas móviles y tablets */
+  .sw-hint {
+    display: none !important;
+  }
+
   .sw-copy {
     width: auto !important;
     max-width: 540px !important;
@@ -652,5 +657,69 @@ body {
   .profile-avatar-frame {
     width: 76px;
     height: 76px;
+  }
+}
+
+/* Ocultar también el hint en pantallas con altura reducida o dispositivos táctiles */
+@media (max-height: 760px), (hover: none) and (pointer: coarse) {
+  .sw-hint {
+    display: none !important;
+  }
+}
+
+/* Ajustes de legibilidad y respiro vertical para celulares compactos */
+@media (max-width: 600px) {
+  .sw-copy {
+    left: clamp(12px, 3.5vw, 20px) !important;
+    right: clamp(12px, 3.5vw, 20px) !important;
+  }
+
+  .sw-copy__title {
+    font-size: clamp(1.4rem, 6.2vw, 1.8rem) !important;
+    margin: 4px 0 0 !important;
+    line-height: 1.15 !important;
+  }
+
+  .sw-copy__body {
+    font-size: 0.82rem !important;
+    line-height: 1.4 !important;
+    margin-top: 6px !important;
+  }
+
+  .sw-copy__eyebrow {
+    font-size: 0.70rem !important;
+    margin-top: 4px !important;
+  }
+
+  .sw-copy__tags {
+    margin: 8px 0 0 !important;
+    gap: 4px !important;
+  }
+
+  .sw-copy__tags li {
+    font-size: 0.70rem !important;
+    padding: 3px 8px !important;
+  }
+
+  .hero-stats-grid {
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .hero-stat-card {
+    padding: 8px 12px;
+    border-radius: 10px;
+  }
+
+  .hero-stat-icon {
+    font-size: 1.05rem;
+  }
+
+  .hero-stat-info h4 {
+    font-size: 0.82rem;
+  }
+
+  .hero-stat-info p {
+    font-size: 0.68rem;
   }
 }
